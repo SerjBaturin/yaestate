@@ -1,7 +1,5 @@
 const path = require("path");
 const fs = require("fs");
-const xml = require("xml");
-// const xmlString = xml(xmlObject, options);
 const db = require("./db");
 
 const folder = path.join(__dirname, "");
@@ -9,24 +7,53 @@ const folder = path.join(__dirname, "");
 const getAll = () => {
   db.select()
     .from("obj")
-    .then(d => {
-      // console.log(d);
-      d.map(item => console.log(xml(item)));
-    })
+    .then(d =>
+      d.map(o =>
+        console.log(`<offer internal-id="${o.internalid}">
+    <type>
+    ${o.type}
+    </type>
+    <propery-type>${o.property_type}</propery-type>
+    <category>${o.category_type}</category>
+    <creation-date>${o.creation_date}</creation-date>
+    <location>
+      <country>${o.location_country}</country>
+      <region>${o.location_region}</region>
+      <district>${o.location_district}</district>
+      <locality-name>${o.location_locality_name}</locality-name>
+      <address>${o.location_address}</address>
+      <apartment>${o.location_apartment}</apartment>
+    </location>
+    <sales-agent>
+      <phone>${o.sales_agent_phone}</phone>
+      <category>${o.sales_agent_category}</category>
+    </sales-agent>
+    ${fs.readdirSync(folder + o.images).map(item => `<image>${item}</image>`)}
+    <price>
+      <value>${o.price_value}</value>
+      <currency>${o.price_currency}</currency>
+      <period>${o.price_period}</period>
+    </price>
+    <rent-pledge>${o.rent_pledge}</rent-pledge>
+    <area>     
+      <value>${o.area_value}</value>    
+      <unit>${o.area_unit}</unit>
+    </area>
+    <room-space>     
+      <value>${o.room_space_value}</value>    
+      <unit>${o.room_space_unit}</unit>
+    </room-space>
+    <living-space>     
+      <value>${o.living_space_value}</value>
+      <unit>${o.living_space_unit}</unit>
+    </living-space>
+    <rooms>${o.rooms}</rooms>
+    <rooms-offered>${o.rooms_offered}</rooms-offered>
+    </offer>
+    `),
+      ),
+    )
     .catch(err => console.log(err));
 };
 
-const getImages = () => {
-  db.select("offerimages")
-    .from("obj")
-    .then(d => {
-      fs.readdir(folder + d[0].offerimages, (err, items) => {
-        console.log(items);
-      });
-    })
-    .catch(err => console.log(err));
-};
 getAll();
-getImages();
-
-// setInterval(connectRunner, 2000)
