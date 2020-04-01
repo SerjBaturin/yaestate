@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+      <realty-feed xmlns="http://webmaster.yandex.ru/schemas/feed/realty/2010-06">
+           <generation-date>Wed Apr 01 2020 14:35:49 GMT+0500 (Yekaterinburg Standard Time)</generation-date>
+      
+          <!-- Аренда комнаты -->
+          <offer internal-id="3">
+          <type>аренда</type>
+          <propery-type>жилая</propery-type>
+          <category>undefined</category>
+          <creation-date>Sat Nov 13 2010 12:32:45 GMT+0500 (Yekaterinburg Standard Time)</creation-date>
+          <location>
+            <country>Россия</country>
+            <region>Ленинградская область</region>
+            <district>Выборгский район</district>
+            <locality-name>Выборг</locality-name>
+            <address>Cторожевой башни 2</address>
+            <apartment>16</apartment>
+          </location>
+          <sales-agent>
+            <phone>+79104565459</phone>
+            <category>владелец</category>
+          </sales-agent>
+          <image>171089399.jpg</image>
+          <image>197179243.jpg</image>
+          <image>fgdfgdfdf.jpg</image>
+          <image>sdfsdf.jpeg</image>
+          <image>ssdfsdf.jpeg</image>
+          <price>
+            <value>$15000.00</value>
+            <currency>RUR</currency>
+            <period>месяц</period>
+          </price>
+          <rent-pledge>да</rent-pledge>
+          <area>     
+            <value>140</value>    
+            <unit>кв. м</unit>
+          </area>
+          <room-space>     
+            <value>15</value>    
+            <unit>кв. м</unit>
+          </room-space>
+          <living-space>     
+            <value>15</value>
+            <unit>кв. м</unit>
+          </living-space>
+          <rooms>5</rooms>
+          <rooms-offered>1</rooms-offered>
+          </offer>
+          
+          <!-- Аренда комнаты -->
+          <offer internal-id="2">
+          <type>аренда</type>
+          <propery-type>жилая</propery-type>
+          <category>undefined</category>
+          <creation-date>Sun Nov 13 2011 12:32:45 GMT+0600 (Yekaterinburg Standard Time)</creation-date>
+          <location>
+            <country>Россия</country>
+            <region>Калужская область</region>
+            <district>Ленинский район</district>
+            <locality-name>Какой-то</locality-name>
+            <address>Лучшая 2</address>
+            <apartment>8</apartment>
+          </location>
+          <sales-agent>
+            <phone>+79104565459</phone>
+            <category>владелец</category>
+          </sales-agent>
+          <image>fgdfgdfdf.jpg</image>
+          <image>qweq.jpg</image>
+          <image>qwesd.jpg</image>
+          <image>ssdfsdf.jpeg</image>
+          <image>zxcs.jpeg</image>
+          <price>
+            <value>$10000.00</value>
+            <currency>RUR</currency>
+            <period>месяц</period>
+          </price>
+          <rent-pledge>да</rent-pledge>
+          <area>     
+            <value>14</value>    
+            <unit>кв. м</unit>
+          </area>
+          <room-space>     
+            <value>21</value>    
+            <unit>кв. м</unit>
+          </room-space>
+          <living-space>     
+            <value>25</value>
+            <unit>кв. м</unit>
+          </living-space>
+          <rooms>6</rooms>
+          <rooms-offered>2</rooms-offered>
+          </offer>
+          
+          <!-- Аренда комнаты -->
+          <offer internal-id="23">
+          <type>аренда</type>
+          <propery-type>жилая</propery-type>
+          <category>undefined</category>
+          <creation-date>Fri Nov 13 3215 12:32:45 GMT+0500 (Yekaterinburg Standard Time)</creation-date>
+          <location>
+            <country>Россия</country>
+            <region>zxcss</region>
+            <district>zxc район</district>
+            <locality-name>asdqwqw</locality-name>
+            <address>sdswdf 34</address>
+            <apartment>56</apartment>
+          </location>
+          <sales-agent>
+            <phone>+79104565459</phone>
+            <category>владелец</category>
+          </sales-agent>
+          <image>fgdfgdfdf.jpg</image>
+          <image>qweq.jpg</image>
+          <image>qwesd.jpg</image>
+          <image>ssdfsdf.jpeg</image>
+          <image>zxcs.jpeg</image>
+          <price>
+            <value>$2450.00</value>
+            <currency>RUR</currency>
+            <period>месяц</period>
+          </price>
+          <rent-pledge>да</rent-pledge>
+          <area>     
+            <value>40</value>    
+            <unit>кв. м</unit>
+          </area>
+          <room-space>     
+            <value>45</value>    
+            <unit>кв. м</unit>
+          </room-space>
+          <living-space>     
+            <value>12</value>
+            <unit>кв. м</unit>
+          </living-space>
+          <rooms>3</rooms>
+          <rooms-offered>6</rooms-offered>
+          </offer>
+          
+      </realty-feed>
