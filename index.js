@@ -39,4 +39,5 @@ const xmlGenerator = () => {
     })
     .catch(err => console.log(err));
 };
+// Requests to DB with interval
 setInterval(xmlGenerator, 10000);
