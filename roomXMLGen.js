@@ -1,7 +1,22 @@
+// fs - work with file system
 const fs = require("fs");
 
-const xmlGen = (o, folder) => {
+/**
+ * roomXMLGen returns ROOM YANDEX ESTATE xml template
+ * 
+ * @param {object} o - one object from array of estate objects (POSTGRESQL)
+ * @param {string} folder - common folder path "/images"
+ * folder + o.images = "/images/obj" (folder with room images)
+ * @return {string} - one room from many rooms array
+ */
+const roomXMLGen = (o, folder) => {
+  
+  // imgArray it's an array of images from object folder
+  // readdirSync it's a sync method to read folder's elements (images)
+  // we need sync method - cause we need insert images in xml template
+  // if we will use async method (fs.readdir) - our images will NOT insert in xml template
   const imgArray = fs.readdirSync(folder + o.images);
+  
   return `
           <!-- Аренда комнаты -->
           <offer internal-id="${o.internalid}">
@@ -50,4 +65,4 @@ const xmlGen = (o, folder) => {
           `;
 };
 
-module.exports = xmlGen;
+module.exports = roomXMLGen;

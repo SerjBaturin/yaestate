@@ -1,21 +1,36 @@
+
+// Require some modules
+// path - resolving system path problem
+// fs - work with file system
+// db - db connection with KNEX package (db folder)
+// roomXMLGen - function for one room xml generating
+ 
 const path = require("path");
 const fs = require("fs");
 const db = require("./db");
-const xmlGen = require("./xmlGen");
+const roomXMLGen = require("./roomXMLGen");
 
+// Common folder "/images/obj" where obj is an images folder
 const folder = path.join(__dirname, "");
 
-const getAll = () => {
+/**
+ * xmlGenerator function makes a FEED with all rooms in POSTGRES
+ * makes an xml file - roomXMLGen.xml
+ * @returns {string} - 
+ */
+const xmlGenerator = () => {
+  // Get objects array from DB (async knex query)
   db.select()
     .from("obj")
     .then(d => {
+      // writeFileSync method makes an XML file
       fs.writeFileSync(
-        "ya.xml",
+        "roomXMLGen.xml",
         `<?xml version="1.0" encoding="utf-8"?>
       <realty-feed xmlns="http://webmaster.yandex.ru/schemas/feed/realty/2010-06">
            <generation-date>${new Date()}</generation-date>
       ${d
-        .map(o => xmlGen(o, folder))
+        .map(o => roomXMLGen(o, folder))
         .toString()
         .split(",")
         .join("")}
@@ -24,4 +39,4 @@ const getAll = () => {
     })
     .catch(err => console.log(err));
 };
-getAll();
+setInterval(xmlGenerator, 10000);

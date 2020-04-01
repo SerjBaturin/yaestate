@@ -4,7 +4,9 @@
   "description": "yandex real estate xml generator",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js &",
+    "dev": "nodemon index.js",
+    "docs": "jsdoc index.js roomXMLGen.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,7 @@
   },
   "homepage": "https://github.com/SerjBaturin/yaestate#readme",
   "dependencies": {
+    "jsdoc": "^3.6.3",
     "knex": "^0.20.13",
     "nodemon": "^2.0.2",
     "path": "^0.12.7",
